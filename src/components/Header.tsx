@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { styled } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 import DehazeIcon from "@mui/icons-material/Dehaze";
@@ -48,8 +48,26 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <div style={{ width: "300px", display: "flex", justifyContent: "space-evenly" }}>
-        <DehazeIcon onClick={toggleDrawer(true)} />
+      <div
+        style={{
+          width: "300px",
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+        }}
+      >
+        {/* <DehazeIcon onClick={toggleDrawer(true)} /> */}
+        <Button
+          sx={{
+            color: "black",
+            width: 40,
+            height: 40,
+          }}
+          onClick={toggleDrawer(true)}
+          variant="text"
+          startIcon={<DehazeIcon />}
+        />
+
         <TextLogo />
       </div>
 
